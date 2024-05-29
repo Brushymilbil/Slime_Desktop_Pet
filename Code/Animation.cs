@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SlimeCharacterForDutch
+﻿namespace SlimeCharacterForDutch
 {
     internal class Animation : IDisposable
     {
@@ -16,8 +10,8 @@ namespace SlimeCharacterForDutch
         public bool isLooped = false;
         public bool isPlaying = false;
 
-        public Animation(Form main, string n, int delay, params string[] paths) {
-            buffer = new ImageBuffer(main, n, paths);
+        public Animation(Form main, int delay, params string[] paths) {
+            buffer = new ImageBuffer(main, paths);
             timer = new System.Windows.Forms.Timer() { Interval = delay };
             this.main = main;
 

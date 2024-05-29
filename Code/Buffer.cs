@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SlimeCharacterForDutch
+﻿namespace SlimeCharacterForDutch
 {
     internal class ImageBuffer : IDisposable
     {
@@ -15,7 +9,7 @@ namespace SlimeCharacterForDutch
         private readonly string[] paths;
         private bool isdisposed = false;
 
-        public ImageBuffer(Control target, string n, params string[] paths)
+        public ImageBuffer(Control target, params string[] paths)
         {
             this.target = target;
             this.paths = paths;

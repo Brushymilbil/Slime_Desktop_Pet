@@ -33,14 +33,14 @@ namespace SlimeCharacterForDutch
             this.DoubleBuffered = true;
 
             CenterToScreen();
-            idle = new Animation(this, "idle",500, Path.GetFullPath("Images\\idle.png"), Path.GetFullPath("Images\\idle2.png")) { isLooped = true };
-            move = new Animation(this, "move",125, Path.GetFullPath("Images\\walk.png"), Path.GetFullPath("Images\\walk2.png"),
+            idle = new Animation(this, 500, Path.GetFullPath("Images\\idle.png"), Path.GetFullPath("Images\\idle2.png")) { isLooped = true };
+            move = new Animation(this, 125, Path.GetFullPath("Images\\walk.png"), Path.GetFullPath("Images\\walk2.png"),
                     Path.GetFullPath("Images\\walk3.png"), Path.GetFullPath("Images\\walk4.png"), Path.GetFullPath("Images\\walk5.png"),
                     Path.GetFullPath("Images\\walk6.png"), Path.GetFullPath("Images\\walk7.png"))
                 { isLooped = true };
 
-            die = new Animation(this, "die",250, Path.GetFullPath("Images\\die.png"), Path.GetFullPath("Images\\die1.png"), Path.GetFullPath("Images\\die2.png"), Path.GetFullPath("Images\\die3.png"));
-            eat = new Animation(this, "eat",250, Path.GetFullPath("Images\\eat.png"), Path.GetFullPath("Images\\eat2.png"), Path.GetFullPath("Images\\eat3.png"), Path.GetFullPath("Images\\eat4.png"));
+            die = new Animation(this, 250, Path.GetFullPath("Images\\die.png"), Path.GetFullPath("Images\\die1.png"), Path.GetFullPath("Images\\die2.png"), Path.GetFullPath("Images\\die3.png"));
+            eat = new Animation(this, 250, Path.GetFullPath("Images\\eat.png"), Path.GetFullPath("Images\\eat2.png"), Path.GetFullPath("Images\\eat3.png"), Path.GetFullPath("Images\\eat4.png"));
             
             PineAppleImage = new Lazy<Image>(() => {
                 try {
@@ -181,8 +181,6 @@ namespace SlimeCharacterForDutch
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Program());
         }
